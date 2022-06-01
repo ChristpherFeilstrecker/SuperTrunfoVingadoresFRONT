@@ -7,7 +7,7 @@ const useRequestData = (url) =>{
 
     useEffect((url)=>{
     axios
-    .post("https://super-trumfo-vingadores.herokuapp.com/supertrunfomarvel/start")
+    .post("https://super-trunfo-vingadores.herokuapp.com/supertrunfomarvel/start")
     .then((response)=>{
         
         setData(response.data);

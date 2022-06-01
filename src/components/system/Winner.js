@@ -1,9 +1,7 @@
-import { useState } from "react";
-
 
 let Winner = ({ cardsJogador, cardsPC, attribut }) => {
 
-  if (cardsJogador[0].tipo === "Super Trumfo") {
+  if (cardsJogador[0].tipo === "Super Trunfo") {
     const id = ["A1", "A2", "A3", "A4", "A5", "A6"]
 
     for (let idCard of id) {
@@ -14,7 +12,7 @@ let Winner = ({ cardsJogador, cardsPC, attribut }) => {
      
     return "Card Jogador Ganhou"
 
-  } else if (cardsPC[0].tipo === "Super Trumfo") {
+  } else if (cardsPC[0].tipo === "Super Trunfo") {
     const id = ["A1", "A2", "A3", "A4", "A5", "A6"]
 
     for (let idCard of id) {

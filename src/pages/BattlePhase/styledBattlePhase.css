@@ -151,5 +151,39 @@ display: flex;
             color: white;
     
         }
+
+        .giv-card-player{
+            animation: givplayer 2s;
+        }
+
+        @keyframes givplayer {
+            0% {
+                opacity: 1;
+                margin-left: none;
+                
+            }
+            100% {
+                opacity: 0;
+                margin-left: 0;
+                
+            }
+        }
+
+        .giv-card-pc{
+            animation: givpc 2s;
+        }
+
+        @keyframes givpc {
+            0% {
+                opacity: 1;
+                margin-top: 0;
+                
+            }
+            100% {
+                opacity: 0;
+                margin-top: -2rem;
+                
+            }
+        }
         
 

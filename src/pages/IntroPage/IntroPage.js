@@ -22,26 +22,28 @@ export default function IntroPage({ cards, setCards }) {
             <div className="body-intro-page">
                 <div className="btn-start-game-container">
                     <div className="btn-start-game" onClick={() => selectCards()}>
-                    <img className="img-btn-start" src={btnStart}></img>
-                        </div>
+                        <img className="img-btn-start" src={btnStart} alt="backbtn"></img>
+                    </div>
                 </div>
+
                 <div className="btn-structions-container">
                     <div className="btn-structions" onClick={() => navigate(`/instructions`)}>
-                    <img className="img-btn-strucions" src={btnBack}></img>
+                        <img className="img-btn-strucions" src={btnBack} alt="backbtn"></img>
 
-                    <div className="img-btn-strucions-word">Instruções</div>
-                        </div>
+                        <div className="img-btn-strucions-word">Instruções</div>
+                    </div>
                 </div>
 
             </div>
-            <img className="img-fundo-intro" src={fundoIntro}></img>
+            <img className="img-fundo-intro" src={fundoIntro} alt="backimg"></img>
             <div className="img-vingadores-container">
-                <img className="img-vingadores" src={vingadores}></img>
+                <img className="img-vingadores" src={vingadores} alt="imgavengers"></img>
             </div>
 
             <div className="img-logovingadores-container">
-                <img className="img-logovingadores" src={logovingadores}></img>
+                <img className="img-logovingadores" src={logovingadores} alt="logo"></img>
             </div>
+
         </div>
     )
 }

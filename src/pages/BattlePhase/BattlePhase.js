@@ -8,10 +8,11 @@ import imgPlayer from "../../components/images/Style/player.png"
 import imgPC from "../../components/images/Style/pc.png"
 import backCard from "../../components/images/Style/fundocarta.png"
 import frontCard from "../../components/images/Style/cartafrente.png"
+import { useEffect, useState } from "react";
 
 
 export default function BattlePhase({ cards, setCards, attribut, setAttribut, setTurn, turn }) {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   const cardsJogador = cards.cardsJogador
   const cardsPC = cards.cardsPC
@@ -19,9 +20,10 @@ export default function BattlePhase({ cards, setCards, attribut, setAttribut, se
   let win = Winner({ cardsJogador, cardsPC, attribut })
 
   const message = () => {
+
     if (win === "Card Jogador Ganhou") {
       return ("Receba carta")
-    } else {
+    } else if (win === "Card PC Ganhou") {
       return ("Entregue sua carta")
     }
   }
@@ -30,7 +32,7 @@ export default function BattlePhase({ cards, setCards, attribut, setAttribut, se
   const givCard = () => {
 
     if (win === "Card Jogador Ganhou") {
-
+   
       setTurn("jogador")
       setAttribut("?")
       cardsJogador.push(cardsPC[0])
@@ -40,7 +42,7 @@ export default function BattlePhase({ cards, setCards, attribut, setAttribut, se
       localStorage.setItem('cards', JSON.stringify(cards))
       localStorage.setItem('turn', JSON.stringify(turn))
     } else {
-
+    
       setTurn("pc")
       cardsPC.push(cardsJogador[0])
       cardsPC.push(cardsPC[0])
@@ -55,38 +57,40 @@ export default function BattlePhase({ cards, setCards, attribut, setAttribut, se
     } else if (cardsPC.length === 0) {
       navigate(`/winner`)
     } else {
-
-      navigate(`/select`)
+      
+        navigate(`/select`)
     }
-
-
   }
 
   const cardsPlayerPack = cardsJogador && cardsJogador.map((product) => {
-    return <div>
-      <img className="back-card-player" src={backCard} alt="backcard"></img>
+    return <div key={product.id}>
+      <img className="back-card-player" src={backCard} key={product.id} alt="backcard"></img>
     </div>
   })
 
   const cardsPcPack = cardsPC && cardsPC.map((product) => {
-    return <div>
-      <img className="back-card-player invert-img" src={backCard} alt="backcard"></img>
+    return <div key={product.id}>
+      <img className="back-card-player invert-img" src={backCard} key={product.id} alt="backcard"></img>
     </div>
   })
 
   return (
     <div id="selectAtribut">
       <img className="img-fundo-intro" src={fundoIntro} alt="back"></img>
-
-
-      <div className="select-atribut-container-page">
+      <div className="select-atribut-container-page">       
         <div className="left-container-select-page">
           <div className="left-select-box">
             <div className="left-tittle-select-page">Resultado:</div>
             <div className="left-atribut-selected">
               <img className="img-btn-msg-winner" src={btnBack} alt="backbtn"></img>
               <div className="atribut-selected-word">{win}</div>
+              <div className="img-btn-battle-container">
+            <div onClick={() => givCard()} className="imgs-container">
+              <img className="img-btn-battle-page" src={btnBack} alt="backbtn"></img>
+              <div className="message-btn" >{message()}</div>
             </div>
+          </div>             
+            </div>          
           </div>
           <div className="left-cards-box adjust" >
             <div className="img-player-box">
@@ -101,7 +105,6 @@ export default function BattlePhase({ cards, setCards, attribut, setAttribut, se
             </div>
             <div className="pack-player-cards">
               {cardsPlayerPack}
-
               <div className="player-card-box">
                 <img className="card-player" src={frontCard} alt="frontcard"></img>
                 <div className="card-player-atributs-container">
@@ -124,54 +127,39 @@ export default function BattlePhase({ cards, setCards, attribut, setAttribut, se
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
         <div className="rigth-container-select-page">
-
           <div className="rigth-cards-box">
             <div className="pack-pc-cards">
               {cardsPcPack}
               <div className="pc-card-box turn180">
-
                 <div className="pc-front-card-box">
                   <div className="atributs-container2">
                     <img className="atribut-img-card" src={cardsPC && cardsPC[0].imagem} alt="imgavenger" />
                   </div>
                   <img className="front-card-img" src={frontCard} alt="frontcard"></img>
-
                   <div className="atributs-pc-card">
-
                     <div className="atributs-container1-pc-card">
-                      <div className="atribut-card" >{cardsJogador && cardsJogador[0].inteligencia}</div>
+                      <div className="atribut-card" >{cardsPC && cardsPC[0].inteligencia}</div>
                       <div className="atribut-name-card">{cardsPC && cardsPC[0].nome}</div>
                       <div className="id-card">{cardsPC && cardsPC[0].id}</div>
                     </div>
-
                     <div className="atributs-container2-pc-card">
                       <div className="atribut-card-2">Habilidade: {cardsPC && cardsPC[0].habilidade}</div>
                       <div className="atribut-card-2" >Velocidade: {cardsPC && cardsPC[0].velocidade}</div>
                     </div>
-
                     <div className="atributs-container3-pc-card">
                       <div className="atribut-card" >{cardsPC && cardsPC[0].forca}</div>
                       <div className="atribut-tipo" >{cardsPC && cardsPC[0].tipo}</div>
-                      <div className="atribut-card" >{cardsJogador && cardsJogador[0].equipamento}</div>
+                      <div className="atribut-card" >{cardsPC && cardsPC[0].equipamento}</div>
                     </div>
-
                   </div>
-
-
                 </div>
-
                 <div className="pc-back-card-box">
                   <img className="back-card-img" src={backCard} alt="backcard"></img>
-
                 </div>
-
-
-
               </div>
             </div>
             <div className="img-player-box">
@@ -185,12 +173,7 @@ export default function BattlePhase({ cards, setCards, attribut, setAttribut, se
               </div>
             </div>
           </div>
-          <div className="img-btn-battle-container">
-            <div onClick={() => givCard()} className="imgs-container">
-              <img className="img-btn-battle-page" src={btnBack} alt="backbtn"></img>
-              <div className="message-btn" >{message()}</div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>

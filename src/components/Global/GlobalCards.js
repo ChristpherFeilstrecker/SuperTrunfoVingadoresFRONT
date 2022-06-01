@@ -4,7 +4,7 @@ import useRequestData from "../Hooks/useRequestData";
 
 const GlobalCards = (props) => {
 
-const cards = useRequestData(`${BASE_URL}/supertrunfomarvel/start`)
+const cards = useRequestData(`https://super-trunfo-vingadores.herokuapp.com/supertrunfomarvel/start`)
 
 let cardsJogador =cards && cards.cardsJogador.slice();
 
