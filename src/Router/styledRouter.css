@@ -1,0 +1,28 @@
+.splash-screm {
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-splash{
+    width: 15rem;
+    animation: splash 2s infinite;
+}
+
+@keyframes splash {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity:1;
+    }
+
+   
+
+    100% {
+        opacity: 0;
+    }
+}

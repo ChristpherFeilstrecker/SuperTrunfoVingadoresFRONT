@@ -1,0 +1,84 @@
+
+.winner-container{
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    gap: 5rem;
+}
+
+.winner-box{
+    display: flex;
+    gap: 15rem;
+    margin-left: -3rem;
+    margin-top: 8rem;
+}
+
+.img-fundo-winner{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.winner-left-container{
+  transform: rotate(-10deg);  
+}
+
+.winner-rigth-container{
+    transform: rotate(10deg);
+    margin-top: 3rem;  
+  }
+
+
+.card-back-left{
+    height: 18rem;
+}
+
+.card-back{
+    height: 18rem;
+}
+
+.winner-text{
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    font-family: 'avengers font'
+}
+
+.btn-winner-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+
+.btn-winner-container:hover{
+    opacity: 0.7;
+}
+
+.new-game-word{
+    margin-top: -2.3rem;
+    color: white;
+    font-size: 1.5rem;
+    font-family: 'avengers font'
+}
+
+.name-player{
+    color: white;
+    font-size: 1rem;
+    font-family: 'avengers font'
+}
+.to-top{
+    margin-top: -16.25rem;
+}
+
+

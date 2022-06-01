@@ -1,0 +1,421 @@
+#selectAtribut {
+    display: flex;
+    width: 100vw;
+}
+
+.img-fundo-select-atribut{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.select-atribut-container-page {
+    display: flex;
+    z-index: 1;
+}
+
+.left-container-select-page {
+    width: 50%;
+}
+
+.rigth-container-select-page {
+    width: 50%;
+}
+
+.left-select-box {
+    margin-top: 25vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-tittle-select-page {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    justify-content: center;
+    font-family: 'avengers font'
+}
+
+.left-atribut-selected {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.atribut-selected-word {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: -2.8rem;
+    
+}
+
+.card-winner-word {
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: -2.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.left-cards-box {
+    margin-top: 4.5rem;
+    display: flex;
+}
+
+.img-player-box {
+    display: flex;
+    flex-direction: column;
+    width: 10vw;
+    align-items: center;
+    gap: 1rem;
+}
+
+.imgs-player-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-player-back {
+    width: 14rem;
+}
+.img-player {
+    margin-top: -11rem;
+    width: 8rem;
+}
+.img-pc {
+    margin-top: -10rem;
+    margin-left: 0.5rem;
+    width: 6rem;
+    margin-bottom: 1.5rem;
+}
+
+.left-player-name-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pack-player-cards {
+    display: flex;
+    margin-left: 10rem;
+}
+
+.pack-pc-cards {
+    display: flex;
+    margin-left: 10rem;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    
+}
+
+.back-card-player {
+    margin-left: -9rem;
+    width: 11rem;
+}
+
+.card-player {
+    width: 12rem;
+    z-index: 1;
+}
+
+.player-card-box{
+    display: flex;
+    background-color: black;
+    z-index: 1;
+    width: 12.2rem;
+    margin-left: -11.5rem;
+    transform-style: preserve-3d;
+    transition: all 0.5s;
+}
+
+
+.rigth-cards-box {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10rem;
+    margin-top: 1rem;
+    
+}
+
+.pack-pc-cards {
+    display: flex;
+    margin-left: 10rem;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.card-pc {
+    margin-left: -11rem;
+    width: 12rem;
+    z-index: 2;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.invert-img{
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1); 
+}
+
+.card-player-atributs-container {
+    margin-top: 0.9rem;
+    margin-left: -11.1rem;
+}
+
+.card-pc-atributs-container {
+    margin-top: 0.9rem;
+    margin-left: -10.2rem;
+    position: absolute;
+
+}
+
+.atribut-card {
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 800;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+    cursor: pointer;
+}
+.atribut-card:hover {
+    color: rgb(89, 232, 89);
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: rgb(250, 249, 249);
+}
+
+.atributs-container1 {
+    display: flex;
+    align-items: center;
+    gap:0.5rem;
+    z-index: 5;
+    position: absolute;
+}
+
+.atributs-container1-pc {
+    display: flex;
+    align-items: center;
+    gap:0.5rem;
+    z-index: 5;
+    position: absolute;
+    margin-left: 0.7rem;
+}
+
+.atribut-name-card{
+    width: 8rem;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.atributs-container2{
+    margin-top: 1rem;
+    width: 10rem;
+    height: 12.5rem;
+    position: absolute;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.atribut-img-card{
+    height: 12.5rem;
+}
+
+.atributs-container3{
+    position: absolute;
+    z-index: 2;
+    margin-top: 9.3rem;
+    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    gap: 0.10rem;
+}
+
+.atribut-card-2 {
+    color: white;
+    cursor: pointer;
+}
+.atribut-card-2:hover {
+    color: rgb(26, 221, 26);
+}
+.atributs-container4{
+    position: absolute;
+    z-index: 2;
+    margin-top: 12rem;
+    width: 10.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    gap: 0.15rem;
+    margin-left: 0.08rem;
+}
+
+.atributs-container4-pc{
+    position: absolute;
+    z-index: 2;
+    margin-top: 12.1rem;
+    width: 10.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    gap: 0.15rem;
+    
+}
+
+.img-btn-battle-container{
+    margin-top: 12rem;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.imgs-container{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: center;
+}
+
+.imgs-container:hover{
+    opacity: 0.8;
+}
+
+
+.img-btn-battle{
+width: 20rem;
+}
+
+
+.img-battle{
+    margin-top: -3rem;
+    width: 10rem;
+}
+
+.adjust{
+    margin-top: 4.57rem;
+}
+
+.id-card{
+    color: rgb(7, 7, 7);
+    background-color: rgb(246, 255, 0);
+    padding: 0.5rem;
+    border-radius: 50%;
+    margin-left: -1rem;
+}
+
+.id-card-pc{
+    color: rgb(7, 7, 7);
+    background-color: rgb(246, 255, 0);
+    padding: 0.5rem;
+    border-radius: 50%;
+    margin-right: -1rem;
+    margin-left: -1.5rem;
+}
+
+.message-btn{
+    font-size: 1.5rem;
+    font-family: 'avengers font'
+}
+
+.message-btn-top{
+    margin-top: -3.1rem;
+}
+
+.atribut-tipo{
+    position: absolute;
+    margin-top: 2rem;
+    margin-left: 2.3rem;
+    background-color: rgb(6, 6, 6);
+}
+
+.atribut-tipo-pc{
+    position: absolute;
+    margin-top: 4.5rem;
+    
+    background-color: rgb(6, 6, 6);
+}
+
+
+
+    .select-atribut-container-page {
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        width: 100vw;
+        justify-content: center;
+    }
+
+    .left-container-select-page {
+        width: 100%;
+    }
+    
+    .rigth-container-select-page {
+        width: 100%;
+    }
+
+    .left-select-box {
+        margin-top: 1vh;
+        display: flex;
+        align-items: flex-start;
+        padding-left: 5vw;
+        flex-direction: column;
+    }
+
+    .img-btn-battle-container{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        margin-top: -37rem;
+        margin-left: 50vw;
+        
+    }
+
+    .img-player-box {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .pack-player-cards {
+        display: flex;
+        margin-left: 4rem;
+    }
+    
+    .pack-pc-cards {
+        display: flex;
+        margin-left: none;
+        margin-right: -4rem;
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+    }
+
+    .left-cards-box {
+        margin-top: 1.5rem;
+        display: flex;
+    }
+
+    .img-btn-battle{
+        width: 15rem;
+        }
+ 
+

@@ -1,0 +1,67 @@
+.baseboard-page{
+    background-image: linear-gradient(to right, indigo,rgb(129, 33, 184),indigo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 15vh;
+    z-index: 3;
+}
+
+.developed-text{
+    color: rgb(169, 159, 159); 
+}
+
+.line-baseboard{
+    width: 35vw;
+    margin: 0.7rem 0;
+    background-image: linear-gradient(to right, #6f16a6,white,#6f16a6);
+    height: 0.3rem;
+}
+
+.social-media-container{
+    display: flex;
+    gap: 4rem;
+}
+a{
+  text-decoration: none; 
+  color: rgb(169, 159, 159); 
+}
+
+
+.github-container, .linkedin-container, .whats-container, .email-container{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    transition: 0.3s all ease;
+}
+.container-white{
+    color: white;
+}
+
+.container-grey, .container-white{
+    display: flex;
+    align-items: center;
+    transition: 0.3s all ease;
+    gap: 0.3rem;
+}
+
+.container-grey{
+    margin-top: -1.8rem;
+}
+
+.container-grey:hover{
+opacity: 0;
+color:white;
+}
+
+.icon-baseboard{
+    width: 1.5rem;
+
+}
+
+
+.icon-baseboard-white{
+    width: 1.5rem;
+}

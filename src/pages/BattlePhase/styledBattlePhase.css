@@ -1,0 +1,155 @@
+#battlePhase{
+    display: flex;
+}
+
+.battle-phase-body{
+z-index: 5;
+display: flex;
+}
+
+.message-btn{
+    color:white;
+    font-size: 1.5rem;
+    margin-top: -2.5rem;
+}
+
+
+.atributs-container1-pc .atributs-container2-pc .atributs-container3-pc .atributs-container4-pc {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1); 
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1); 
+}
+
+.turn180{
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1); 
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1); 
+}
+
+.img-btn-battle-page{
+    width: 20rem;
+    height: 3.5rem;
+    }
+
+    .img-btn-msg-winner{
+        width: 20rem;
+        height: 3.1rem;
+        }
+
+        .player-pc-card-box{
+            display: flex;
+            background-color: black;
+            z-index: 1;
+            width: 2rem;
+            margin-right: -0rem;
+        }
+
+        .pc-front-card-box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            z-index: 1;
+            animation: flipfront 2s ;
+        }
+
+        @keyframes flipfront {
+            0% {  
+                transform: rotateY(180deg);
+            }
+            100% {  
+                transform: rotateY(0deg);
+            }
+        }
+
+        .atributs-pc-container{
+            margin-top: 0.9rem;
+            margin-left: -11.1rem;
+        }
+
+.pack-pc-cards{
+            display: flex;
+        }
+
+        .pc-card-box{
+            display: flex;
+            flex-direction: column;
+            margin-left: -11rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        
+
+        .front-card-img{
+            width: 12rem;
+            z-index: 4;
+        }
+
+        .back-card-img{
+            width: 12rem;
+        }
+
+        .pc-back-card-box{
+            position: absolute;
+            z-index: 0;
+            opacity: 0;
+            animation: flipback 2s ;
+        }
+
+        @keyframes flipback {
+            0% {
+                opacity: 1;
+                z-index: 10;
+                transform: rotateY(0deg);
+            }
+            29% {
+                z-index: 10;
+                opacity: 1;
+            }
+            30% {
+                z-index: 0;
+                opacity: 0;
+            }
+            52% {
+                z-index: 0;
+                opacity: 0;
+            }
+         
+            100% {
+                z-index: 0;
+                transform: rotateY(180deg);
+            }
+        }
+
+        .atributs-pc-card{
+            position: absolute;
+            z-index: 6;
+            height: 13.9rem;
+        }
+
+        .atributs-container1-pc-card{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .atributs-container2-pc-card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 7rem;
+        }
+        .atributs-container3-pc-card{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+    
+        }
+        
+
